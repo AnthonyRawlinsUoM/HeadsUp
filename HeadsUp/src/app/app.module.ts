@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AgmCoreModule } from '@agm/core';
 
 import { D3Service } from 'd3-ng2-service';
+import { ApiconsumerService } from './services/apiconsumer.service';
+import { GeoJsonconsumerService } from './services/geo-jsonconsumer.service';
 
 import { AppComponent } from './app.component';
 import { PlumesComponent } from './views/plumes/plumes.component';
@@ -43,7 +45,11 @@ import { GooglemapComponent } from './views/googlemap/googlemap.component';
     SuiModule,
     AgmCoreModule.forRoot({apiKey:'AIzaSyCKc1o8qtfpkWMFUYkmyXpmx_CMYW1A8tQ'})
   ],
-  providers: [D3Service],
+  providers: [
+    D3Service,
+    ApiconsumerService,
+    GeoJsonconsumerService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
