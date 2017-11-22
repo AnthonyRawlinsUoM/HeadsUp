@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {SuiModule} from 'ng2-semantic-ui';
+import { SuiModule } from 'ng2-semantic-ui';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
-import {AgmCoreModule} from '@agm/core';
+import { AgmCoreModule } from '@agm/core';
 
 import { D3Service } from 'd3-ng2-service';
 
@@ -19,7 +19,7 @@ import { SearchComponent } from './views/search/search.component';
 import { StatsComponent } from './views/stats/stats.component';
 import { Viewer3DComponent } from './views/viewer3d/viewer3d.component';
 import { GooglemapComponent } from './views/googlemap/googlemap.component';
-import {google} from "@agm/core/services/google-maps-types";
+// import { google } from '@agm/core/services/google-maps-types';
 
 
 @NgModule({
