@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {SuiModule} from 'ng2-semantic-ui';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { D3Service } from 'd3-ng2-service';
 
@@ -10,6 +11,7 @@ import { MapComponent } from './views/map/map.component';
 import { GaugeComponent } from './views/gauge/gauge.component';
 import { MenusystemComponent } from './views/menusystem/menusystem.component';
 import { FiresComponent } from './views/fires/fires.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -19,10 +21,12 @@ import { FiresComponent } from './views/fires/fires.component';
     MapComponent,
     GaugeComponent,
     MenusystemComponent,
-    FiresComponent
+    FiresComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     SuiModule
   ],
   providers: [D3Service],

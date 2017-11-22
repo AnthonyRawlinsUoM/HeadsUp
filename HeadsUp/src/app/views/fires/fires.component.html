@@ -1,3 +1,23 @@
-<p>
-  fires works!
-</p>
+<h3>{{heading}}</h3>
+<div class="ui relaxed divided items">
+  <div *ngFor="let f of active_fires" class="item">
+    <div class="ui small image">
+      <img src="assets/images/wireframe/image.png">
+    </div>
+    <div class="content">
+      <div class="ui red ribbon label">
+        <i class="cube icon"></i> {{f.category}}
+      </div>
+      <a class="header">{{f.location}}</a>
+      <div class="meta">
+        <a>Since: {{f.since}}</a>
+      </div>
+      <div class="description">
+        A description which may flow for several lines and give context to the content.
+      </div>
+      <div class="extra">
+
+      </div>
+    </div>
+  </div>
+</div>

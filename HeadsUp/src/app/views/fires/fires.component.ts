@@ -7,6 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiresComponent implements OnInit {
 
+  heading = "Active Fires"
+
+  active_fires:any = [{
+    since: 'datetimestamp',
+    location: 'Location A',
+    category: 'Controlled'
+
+  }, {
+    since: 'datetimestamp',
+    location: 'Location B',
+    category: 'Active'
+  },]
+
   constructor() { }
 
   ngOnInit() {
