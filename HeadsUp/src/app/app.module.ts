@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {SuiModule} from 'ng2-semantic-ui';
 
-
+import { D3Service } from 'd3-ng2-service';
 
 import { AppComponent } from './app.component';
 import { PlumesComponent } from './views/plumes/plumes.component';
@@ -25,7 +25,7 @@ import { FiresComponent } from './views/fires/fires.component';
     BrowserModule,
     SuiModule
   ],
-  providers: [],
+  providers: [D3Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
