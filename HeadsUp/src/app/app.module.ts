@@ -12,6 +12,9 @@ import { GaugeComponent } from './views/gauge/gauge.component';
 import { MenusystemComponent } from './views/menusystem/menusystem.component';
 import { FiresComponent } from './views/fires/fires.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { ToolsetComponent } from './views/toolset/toolset.component';
+import { SearchComponent } from './views/search/search.component';
+import { StatsComponent } from './views/stats/stats.component';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
     GaugeComponent,
     MenusystemComponent,
     FiresComponent,
-    DashboardComponent
+    DashboardComponent,
+    ToolsetComponent,
+    SearchComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,

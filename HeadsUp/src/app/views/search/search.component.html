@@ -1,0 +1,8 @@
+<ng-template let-result let-query="query" #template>
+  {{ result.title }} ({{ result.index }})
+</ng-template>
+<sui-search [options]="options"
+            optionsField="title"
+            [resultTemplate]="template"
+            [retainSelectedResult]="false"
+            (resultSelected)="alert($event.title)"></sui-search>

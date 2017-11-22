@@ -1,16 +1,35 @@
-<div class="ui primary pointing menu">
+<div class="ui primary pointing top attached menu">
+
+  <a class="item" (click)="sidebar.toggle()">
+    <i class="sidebar icon"></i> Menu
+  </a>
+
   <a class="item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-    Home
+    Dashboard
   </a>
   <a class="item" routerLink="fires" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-    Fire Watch
+    Active Fires
   </a>
   <a class="item" routerLink="plume" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
     Plume Viewer
   </a>
   <div class="right menu">
+    <app-search></app-search>
     <a class="ui item">
       Logout
     </a>
   </div>
 </div>
+
+<sui-sidebar-container class="ui bottom attached segment">
+
+  <sui-sidebar class="inverted vertical" #sidebar>
+    <app-toolset></app-toolset>
+  </sui-sidebar>
+
+  <sui-sidebar-sibling [isDimmedWhenVisible]="true">
+    <div class="ui container">
+      <router-outlet></router-outlet>
+    </div>
+  </sui-sidebar-sibling>
+</sui-sidebar-container>
