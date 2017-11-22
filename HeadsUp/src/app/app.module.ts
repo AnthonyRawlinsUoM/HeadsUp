@@ -15,6 +15,7 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { ToolsetComponent } from './views/toolset/toolset.component';
 import { SearchComponent } from './views/search/search.component';
 import { StatsComponent } from './views/stats/stats.component';
+import { Viewer3DComponent } from './views/viewer3d/viewer3d.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { StatsComponent } from './views/stats/stats.component';
     DashboardComponent,
     ToolsetComponent,
     SearchComponent,
-    StatsComponent
+    StatsComponent,
+    Viewer3DComponent
   ],
   imports: [
     BrowserModule,
