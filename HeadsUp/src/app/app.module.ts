@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { PlumesComponent } from './views/plumes/plumes.component';
 import { MapComponent } from './views/map/map.component';
 import { GaugeComponent } from './views/gauge/gauge.component';
+import { MenusystemComponent } from './views/menusystem/menusystem.component';
+import { FiresComponent } from './views/fires/fires.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { GaugeComponent } from './views/gauge/gauge.component';
     AppComponent,
     PlumesComponent,
     MapComponent,
-    GaugeComponent
+    GaugeComponent,
+    MenusystemComponent,
+    FiresComponent
   ],
   imports: [
     BrowserModule,
