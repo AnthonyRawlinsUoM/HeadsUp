@@ -1,3 +1,9 @@
 #dashboard * {
   /* font-size: 0.85em; */
 }
+
+.ui #dashboard div#mapbox,
+.ui #dashboard div#mapbox.mapboxgl-map {
+  width: auto !important;
+  height: 250px !important;
+}

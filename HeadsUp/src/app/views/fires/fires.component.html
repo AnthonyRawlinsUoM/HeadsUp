@@ -1,23 +1,42 @@
-<h3>{{heading}}</h3>
-<div class="ui relaxed divided items">
-  <div *ngFor="let f of active_fires" class="item">
+<div class="ui container"><h3>{{heading}}</h3>
+<div class="ui divided items">
+  <div *ngFor="let f of active_fires.features" class="item segment">
     <div class="ui small image">
-      <img src="assets/images/wireframe/image.png">
+      <a routerLink="/viewer3d"><agm-map
+        [latitude]=f.geometry.coordinates[1]
+        [longitude]=f.geometry.coordinates[0]
+        [zoom]="12"
+        [disableDefaultUI]="true"
+        [zoomControl]="false"
+        [streetViewControl]="false"
+        [mapDraggable]="false"
+        [usePanning]="false">
+        <agm-marker [latitude]=f.geometry.coordinates[1] [longitude]=f.geometry.coordinates[0]></agm-marker>
+      </agm-map>
+      </a>
     </div>
     <div class="content">
       <div class="ui red ribbon label">
-        <i class="cube icon"></i> {{f.category}}
+        <i class="fire icon"></i>
+        {{f.properties.Id}}
       </div>
-      <a class="header">{{f.location}}</a>
+      <a class="header">{{f.properties.State}} - {{f.properties.Name}}
+      </a>
       <div class="meta">
-        <a>Since: {{f.since}}</a>
+        <a>Latest update:
+          {{f.properties.LastReported_LocalTime }}
+        </a>
       </div>
       <div class="description">
-        A description which may flow for several lines and give context to the content.
+        <div class="item"><div class="ui right horizontal label">Size: </div> {{f.properties.Size}} Ha.</div>
+        <div class="item"><div class="ui right horizontal label">Radar station: </div> {{f.properties.RadarId}}</div>
+        <div class="item"><div class="ui right horizontal label">Radar volume: </div> {{f.properties.RadarVolume}}</div>
+        <div class="item"><div class="ui right horizontal label">Appliances: </div> {{f.properties.Appliances}}</div>
       </div>
       <div class="extra">
 
       </div>
     </div>
   </div>
+</div>
 </div>

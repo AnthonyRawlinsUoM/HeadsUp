@@ -12,6 +12,10 @@ export class StatsComponent implements OnInit {
   days_since_fire = 0
   active_appliances = 73
 
+  fulltype = "full"
+  directionLabel = "Wind"
+  measurement = ""
+
   constructor() { }
 
   ngOnInit() {

@@ -1,37 +1,102 @@
-<div class="ui statistic">
-  <div class="label">
-    <i class="compass icon"></i>
-    Detections in last 24 hours
-  </div>
-  <div class="value">
-    {{detections_24hrs}}
-  </div>
-</div>
+<div class="ui four column doubling stackable grid">
 
-<div class="ui statistic">
-  <div class="label">
-    <i class="flag icon"></i>
-    Known Incidents
+  <div class="column">
+    <div class="ui statistic">
+      <div class="label">
+        <i class="compass icon"></i>
+        Plumes in 24 hours
+      </div>
+      <div class="value">
+        {{detections_24hrs}}
+      </div>
+    </div>
   </div>
-  <div class="value">
-    {{current_incidents}}
+
+  <div class="column">
+    <div class="ui statistic">
+      <div class="label">
+        <i class="flag icon"></i>
+        Known Fires
+      </div>
+      <div class="value">
+        {{current_incidents}}
+      </div>
+    </div>
   </div>
-</div>
-<div class="ui statistic">
-  <div class="label">
-    <i class="fire icon"></i>
-    Days since last fire
+
+  <div class="column">
+    <div class="ui statistic">
+      <div class="label">
+        <i class="fire icon"></i>
+        Days since last fire
+      </div>
+      <div class="value">
+        {{days_since_fire}}
+      </div>
+    </div>
   </div>
-  <div class="value">
-    {{days_since_fire}}
+
+  <div class="column">
+    <div class="ui statistic">
+      <div class="label">
+        <i class="shipping icon"></i>
+        Active Appliances
+      </div>
+      <div class="value">
+        {{active_appliances}}
+      </div>
+    </div>
   </div>
-</div>
-<div class="ui statistic">
-  <div class="label">
-    <i class="shipping icon"></i>
-    Appliances in operation
+
+  <div class="row">
+  <div class="ui divider"></div>
   </div>
-  <div class="value">
-    {{active_appliances}}
+
+  <div class="column">
+    <ngx-gauge
+    [type]="fulltype"
+    [value]=32
+    [label]="directionLabel"
+    [append]="measurement"
+    size=100
+    max=360
+    foregroundColor="rgba(208, 56, 22, 1)"
+    ></ngx-gauge>
+  </div>
+
+  <div class="column">
+    <ngx-gauge
+      [type]="fulltype"
+      [value]=100
+      [label]="directionLabel"
+      [append]="measurement"
+      size=100
+      max=360
+      foregroundColor="rgba(208, 56, 22, 1)"
+    ></ngx-gauge>
+  </div>
+
+  <div class="column">
+    <ngx-gauge
+      [type]="fulltype"
+      [value]=42
+      [label]="directionLabel"
+      [append]="measurement"
+      size=100
+      max=360
+      foregroundColor="rgba(208, 56, 22, 1)"
+    ></ngx-gauge>
+  </div>
+
+  <div class="column">
+    <ngx-gauge
+      [type]="fulltype"
+      [value]=53
+      [label]="directionLabel"
+      [append]="measurement"
+      size=100
+      max=360
+      foregroundColor="rgba(208, 56, 22, 1)"
+    ></ngx-gauge>
   </div>
 </div>

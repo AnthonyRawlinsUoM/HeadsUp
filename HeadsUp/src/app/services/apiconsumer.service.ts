@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Rx';
 
 import 'rxjs/add/operator/map';
@@ -8,7 +8,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class ApiconsumerService {
 
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   private apiUrl = 'http://localhost:1880/api';
 

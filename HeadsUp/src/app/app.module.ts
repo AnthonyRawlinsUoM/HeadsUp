@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { SuiModule } from 'ng2-semantic-ui';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { NgxGaugeModule } from 'ngx-gauge';
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -12,7 +14,6 @@ import { GeoJsonconsumerService } from './services/geo-jsonconsumer.service';
 import { AppComponent } from './app.component';
 import { PlumesComponent } from './views/plumes/plumes.component';
 import { MapComponent } from './views/map/map.component';
-import { GaugeComponent } from './views/gauge/gauge.component';
 import { MenusystemComponent } from './views/menusystem/menusystem.component';
 import { FiresComponent } from './views/fires/fires.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
@@ -29,7 +30,6 @@ import { GooglemapComponent } from './views/googlemap/googlemap.component';
     AppComponent,
     PlumesComponent,
     MapComponent,
-    GaugeComponent,
     MenusystemComponent,
     FiresComponent,
     DashboardComponent,
@@ -43,6 +43,8 @@ import { GooglemapComponent } from './views/googlemap/googlemap.component';
     BrowserModule,
     AppRoutingModule,
     SuiModule,
+    HttpClientModule,
+    NgxGaugeModule,
     AgmCoreModule.forRoot({apiKey:'AIzaSyCKc1o8qtfpkWMFUYkmyXpmx_CMYW1A8tQ'})
   ],
   providers: [
